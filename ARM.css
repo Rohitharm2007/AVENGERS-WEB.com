@@ -1,0 +1,379 @@
+.mar{
+    background: linear-gradient(rgba(0, 0, 0,0.5),rgba(0, 0, 0, 0.5)),url(mar.jpg) no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+}
+
+
+
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.banner .content h1{
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #ee0707;
+    color: transparent;
+}
+.banner .content .author{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+}
+.banner .content h2{
+    font-size: 3em;
+}
+.banner .content .model{
+    background-image: url(model.png);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+@media screen and (max-width: 1023px) {
+    .banner .slider{
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+    .banner .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+    }
+    .banner .content .author{
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .banner .slider{
+        width: 100px;
+        height: 150px;
+        left: calc(50% - 50px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(180px);
+    }
+    .banner .content h1{
+        font-size: 5em;
+    }
+}
+.one{
+  
+  margin-left: 2%;
+  margin-top:  10%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+
+}
+.marval{
+    background-color: rgba(237, 235, 235, 0.4);
+    width: 15%;
+    height: 100%;
+    padding: 50px;
+    margin-top: 50px;
+    border-radius: 45px;
+    margin-left:-3%;
+ 
+
+}
+.marval:hover{
+     background-image: url(1f2a36dac0ac4db06596aaf104f0cc8f.jpg);
+    background-color: rgb(202, 24, 24);
+    width: 50%;
+    height: 60%;
+    border-style:outset;
+    padding: 60px;
+    transition:1s;
+    margin-top: 50px;
+    border-radius: 45px;
+    margin-left: -23%;
+}
+.marval img{
+    width: 100px;
+    height: 5%;
+    margin-right:40%;
+    
+}
+@keyframes appear {
+    from {
+      opacity: 0;
+      clip-path: inset(100% 100% 0 0);
+    }
+    to {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .marval {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.one {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.o{
+    margin-left: 70%;
+    margin-top: -13%;
+}
+.o{
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+}
+.history{
+    width: 40%;
+    margin-left: 30%;
+    margin-top: -15%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.history{
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+}
+.history1{
+    width: 70%;
+    margin-left: 30%;
+    margin-top: -0%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.history1{
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+}
+.w img{
+   margin-top: 3%; 
+   width: 20%;
+   margin-left: 5%;
+}
+.w{
+    animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+}
+.history2{
+    width: 72%;
+    margin-left:auto;
+    margin-top: -15%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+.history2{
+    animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+}
+.container{
+    margin: 100px 0 0 200px;
+    width: 70%;
+    height: 450px;
+    display:flex;
+    gap: 10px;
+    margin-left:1%;
+}
+.container img{
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.684);
+    transition: all ease-in-out 0.5s;
+
+}
+.container img:hover{
+    width: 25%;
+    border-color: rgb(228, 52, 52);
+}
+.container{
+    animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+}
+
+
+.b{
+    margin-left: 65%;
+    margin-top: -30%;
+}
+.b{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.history3{
+    width: 40%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 57%;
+
+}
+.history3{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.box1{
+    background-image: url(god\ 0.2.jpg);
+    width: 5%;
+    margin-top: auto;
+    height: 25%;
+    padding: 20%;
+    border-radius: 10%;
+   background-color: gray;
+    margin-right:0%;
+    margin-left: -10%;
+    margin-top: 1%;
+    
+}
+
+.box1:hover{
+    background-image: url(68ac059b327bae4018f2fd7d190af0e5.jpg);
+    width: 20%;
+    border-color: rgb(9, 245, 25);
+    height: 25%;
+    padding: 20%;
+   background-color: rgb(68, 226, 68);
+    margin-left:-10%;
+    border-radius: 10%;
+    transition:1s;
+}
+.box1{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+}
+.sd img{
+    border-radius: 50%;
+    margin-left: 73%;
+    margin-top: -100%;
+}
+.sd img{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.history4{
+    width: 60%;
+    margin-left: 40%;
+    margin-top: -37%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.history4{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+}
+.history5{
+    width: 30%;
+    margin-left: 40%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.history5{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.box24{
+    background: linear-gradient(rgba(0, 0, 0,0.5),rgba(0, 0, 0, 0.5)),url(avrg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 5%;
+    border-radius: 10%;
+}
+.box24:hover{
+    background: linear-gradient(rgba(0, 0, 0,0.5),rgba(0, 0, 0, 0.5)),url(th.png) no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+    margin-top: 5%;
+    border-radius: 10%;
+    transition:5s;
+
+}
